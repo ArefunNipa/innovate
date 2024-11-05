@@ -37,7 +37,7 @@ ul.slick-dots li.slick-active::after{
 ul.slick-dots li.slick-active{color: #262626;}
 .slick-arrow.slick-prev {
     position: absolute;
-    left: 20px;
+    left: 10px;
     z-index: 10;
     top: 38%;
     width: 40px;
@@ -49,7 +49,7 @@ ul.slick-dots li.slick-active{color: #262626;}
 }
 .slick-arrow.slick-next {
     position: absolute;
-    right: 20px;
+    right: 10px;
     z-index: 10;
     top: 38%;
     width: 40px;
@@ -61,5 +61,5 @@ ul.slick-dots li.slick-active{color: #262626;}
 }
 .slick-initialized .slick-slide {
     display: block;
-    padding: 0 20px;
+    padding: 0 10px;
 }
