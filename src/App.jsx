@@ -19,11 +19,35 @@ import { FaUser, FaShoppingCart, FaTruck, FaUndo } from "react-icons/fa";
 import { TbNumber2 } from "react-icons/tb";
 import Heading2 from './components/Heading2'
 import ProductTxt from './components/ProductTxt'
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import NextArrow from './components/NextArrow'
+import PrevArrow from './components/PrevArrow'
+
 
 
 function App() {
+  var settings = {
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    dots:true,
+    arrows:false
+  };
+  var settingss = {
+    infinite: true,
+    speed: 500,
+    slidesToShow: 4,
+    slidesToScroll: 1,
+    nextArrow: <NextArrow />,
+    prevArrow: <PrevArrow />
+  };
+
+
   return (
     <>
+      
       {/* Menu-top Part Start */}
       <div className="bg-white border-b border-borderColor py-5">
         <Container>
@@ -75,18 +99,46 @@ function App() {
       {/* Menu Part End */}
 
       {/* Banner Part Start */}
-      <div className="bg-banner bg-no-repeat bg-cover bg-center">
-        <Container>
-          <Flex className={"justify-start"}>
-            <div className="w-1/2 ml-40 py-44">
-              <Heading as={"h1"} className={"font-DMSans font-bold text-[64px] w-8/12 "} text={"Final Offer"} />
-              <Heading2 className={"font-DMSans text-menuColor text-xl w-10/12 mt-4"}
-                text={"Up to #50%# sale for all furniture items!"} />
-              <Button btnName={"Shop Now"} className={"py-4 px-12 mt-16 text-white bg-black "} />
-            </div>
-          </Flex>
-        </Container>
-      </div>
+      <Slider {...settings}>
+        <div className="bg-banner bg-no-repeat bg-cover bg-center">
+          <Container>
+            <Flex className={"justify-start"}>
+              <div className="w-1/2 ml-40 py-44">
+                <Heading as={"h1"} className={"font-DMSans font-bold text-[64px] w-8/12 "} text={"Final Offer"} />
+                <Heading2 className={"font-DMSans text-menuColor text-xl w-10/12 mt-4"}
+                  text={"Up to #50%# sale for all furniture items!"} />
+                <Button btnName={"Shop Now"} className={"py-4 px-12 mt-16 text-white bg-black "} />
+              </div>
+            </Flex>
+          </Container>
+        </div>
+        <div className="bg-banner bg-no-repeat bg-cover bg-center">
+          <Container>
+            <Flex className={"justify-start"}>
+              <div className="w-1/2 ml-40 py-44">
+                <Heading as={"h1"} className={"font-DMSans font-bold text-[64px] w-8/12 "} text={"Final Offer"} />
+                <Heading2 className={"font-DMSans text-menuColor text-xl w-10/12 mt-4"}
+                  text={"Up to #50%# sale for all furniture items!"} />
+                <Button btnName={"Shop Now"} className={"py-4 px-12 mt-16 text-white bg-black "} />
+              </div>
+            </Flex>
+          </Container>
+        </div>
+        <div className="bg-banner bg-no-repeat bg-cover bg-center">
+          <Container>
+            <Flex className={"justify-start"}>
+              <div className="w-1/2 ml-40 py-44">
+                <Heading as={"h1"} className={"font-DMSans font-bold text-[64px] w-8/12 "} text={"Final Offer"} />
+                <Heading2 className={"font-DMSans text-menuColor text-xl w-10/12 mt-4"}
+                  text={"Up to #50%# sale for all furniture items!"} />
+                <Button btnName={"Shop Now"} className={"py-4 px-12 mt-16 text-white bg-black "} />
+              </div>
+            </Flex>
+          </Container>
+        </div>
+
+      </Slider>
+
       {/* Banner Part End */}
 
       {/* Information Part Start */}
@@ -162,11 +214,11 @@ function App() {
       <div className="py-20">
         <Container>
           <Heading as={"h1"} className={"font-DMSans capitalize text-[39px] pb-10 leading-9 font-bold"} text={"new arrival"} />
-          <Flex className={"justify-between"}>
-            <div className="w-[24%] group">
+          <Slider {...settingss}>
+            <div className="group">
               <div className="relative">
                 <Image imgSrc={productOne} imgAlt={"Image"} />
-                <ProductTxt/>
+                <ProductTxt />
               </div>
               <div className="py-3">
                 <Flex className={"justify-between"}>
@@ -176,10 +228,10 @@ function App() {
                 <Heading as={"h4"} className={"font-DMSans text-menuColor text-[16px] mt-3"} text={"Black"} />
               </div>
             </div>
-            <div className="w-[24%] group">
+            <div className="group">
               <div className="relative">
                 <Image imgSrc={productTwo} imgAlt={"Image"} />
-                <ProductTxt/>
+                <ProductTxt />
               </div>
               <div className="py-3">
                 <Flex className={"justify-between"}>
@@ -189,10 +241,10 @@ function App() {
                 <Heading as={"h4"} className={"font-DMSans text-menuColor text-[16px] mt-3"} text={"Black"} />
               </div>
             </div>
-            <div className="w-[24%] group">
+            <div className="group">
               <div className="relative">
                 <Image imgSrc={productThree} imgAlt={"Image"} />
-                <ProductTxt/>
+                <ProductTxt />
               </div>
               <div className="py-3">
                 <Flex className={"justify-between"}>
@@ -202,10 +254,10 @@ function App() {
                 <Heading as={"h4"} className={"font-DMSans text-menuColor text-[16px] mt-3"} text={"Black"} />
               </div>
             </div>
-            <div className="w-[24%] group">
+            <div className="group">
               <div className="relative">
                 <Image imgSrc={productFour} imgAlt={"Image"} />
-                <ProductTxt/>
+                <ProductTxt />
               </div>
               <div className="py-3">
                 <Flex className={"justify-between"}>
@@ -215,8 +267,7 @@ function App() {
                 <Heading as={"h4"} className={"font-DMSans text-menuColor text-[16px] mt-3"} text={"Black"} />
               </div>
             </div>
-
-          </Flex>
+          </Slider>
         </Container>
       </div>
       {/* Product Part End */}
