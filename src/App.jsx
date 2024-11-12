@@ -215,58 +215,46 @@ function App() {
         <Container>
           <Heading as={"h1"} className={"font-DMSans capitalize text-[39px] pb-10 leading-9 font-bold"} text={"new arrival"} />
           <Slider {...settingss}>
-            <div className="group">
-              <div className="relative">
-                <Image imgSrc={productOne} imgAlt={"Image"} />
-                <ProductTxt />
-              </div>
-              <div className="py-3">
-                <Flex className={"justify-between"}>
-                  <Heading as={"h2"} className={"font-DMSans font-bold text-[20px]"} text={"Basic Crew Neck Tee"} />
-                  <Heading as={"h4"} className={"font-DMSans text-menuColor text-[16px]"} text={"$44.00"} />
-                </Flex>
-                <Heading as={"h4"} className={"font-DMSans text-menuColor text-[16px] mt-3"} text={"Black"} />
-              </div>
-            </div>
-            <div className="group">
-              <div className="relative">
-                <Image imgSrc={productTwo} imgAlt={"Image"} />
-                <ProductTxt />
-              </div>
-              <div className="py-3">
-                <Flex className={"justify-between"}>
-                  <Heading as={"h2"} className={"font-DMSans font-bold text-[20px]"} text={"Basic Crew Neck Tee"} />
-                  <Heading as={"h4"} className={"font-DMSans text-menuColor text-[16px]"} text={"$44.00"} />
-                </Flex>
-                <Heading as={"h4"} className={"font-DMSans text-menuColor text-[16px] mt-3"} text={"Black"} />
-              </div>
-            </div>
-            <div className="group">
-              <div className="relative">
-                <Image imgSrc={productThree} imgAlt={"Image"} />
-                <ProductTxt />
-              </div>
-              <div className="py-3">
-                <Flex className={"justify-between"}>
-                  <Heading as={"h2"} className={"font-DMSans font-bold text-[20px]"} text={"Basic Crew Neck Tee"} />
-                  <Heading as={"h4"} className={"font-DMSans text-menuColor text-[16px]"} text={"$44.00"} />
-                </Flex>
-                <Heading as={"h4"} className={"font-DMSans text-menuColor text-[16px] mt-3"} text={"Black"} />
-              </div>
-            </div>
-            <div className="group">
-              <div className="relative">
-                <Image imgSrc={productFour} imgAlt={"Image"} />
-                <ProductTxt />
-              </div>
-              <div className="py-3">
-                <Flex className={"justify-between"}>
-                  <Heading as={"h2"} className={"font-DMSans font-bold text-[20px]"} text={"Basic Crew Neck Tee"} />
-                  <Heading as={"h4"} className={"font-DMSans text-menuColor text-[16px]"} text={"$44.00"} />
-                </Flex>
-                <Heading as={"h4"} className={"font-DMSans text-menuColor text-[16px] mt-3"} text={"Black"} />
-              </div>
-            </div>
+            <ProductTxt
+              badgeName={'New'}
+              imgSrc={productOne}
+              textOneH={'Add to Wish List'}
+              textTwoH={'Compare'}
+              textThreeH={'Add to Cart'}
+              pHeadingTxt={'Basic Crew Neck Tee'}
+              pPrice={'$44.00'}
+              pColor={'Black'}
+            />
+            <ProductTxt
+              badgeName={'New'}
+              imgSrc={productTwo}
+              textOneH={'Add to Wish List'}
+              textTwoH={'Compare'}
+              textThreeH={'Add to Cart'}
+              pHeadingTxt={'Basic Crew Neck Tee'}
+              pPrice={'$64.00'}
+              pColor={'Black'}
+            />
+            <ProductTxt
+              badgeName={'Update'}
+              imgSrc={productThree}
+              textOneH={'Add to Wish List'}
+              textTwoH={'Compare'}
+              textThreeH={'Add to Cart'}
+              pHeadingTxt={'Basic Crew Neck Tee'}
+              pPrice={'$54.00'}
+              pColor={'Black'}
+            />
+            <ProductTxt
+              badgeName={'New'}
+              imgSrc={productFour}
+              textOneH={'Add to Wish List'}
+              textTwoH={'Compare'}
+              textThreeH={'Add to Cart'}
+              pHeadingTxt={'Basic Crew Neck Tee'}
+              pPrice={'$34.00'}
+              pColor={'Black'}
+            />
           </Slider>
         </Container>
       </div>
